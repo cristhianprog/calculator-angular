@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -120,5 +121,8 @@
       }
     }
   },
-  "defaultProject": "calculator-ska"
+  "defaultProject": "calculator-ska",
+  "cli": {
+    "analytics": "27582a98-5886-472c-a8cf-5d4f4036836d"
+  }
 }

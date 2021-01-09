@@ -1,0 +1,54 @@
+.base-calc {
+    background-color: #0097CC;
+    width: 28rem;
+    border-radius: 0.5rem;
+    border: 0rem;
+}
+
+.displayTop{
+    background-color: #0D7FA9;
+    border-radius: 0.5rem;
+    font-size: 3rem;
+    border: 0rem;
+    height: 8rem;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.buttonDisplay{
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    border: 0rem;
+    width: 5.5rem;
+    height: 5.5rem;
+}
+
+.buttonZero{
+    width: 12.5rem;
+}
+
+.bgBlue{
+    background-color: #0D7FA9;
+}
+
+.bgBlueDark{
+    background-color: #0B7197;
+}
+
+.bgRed{
+    background-color:#FF6869;
+
+}
+
+.bgRed{
+    background-color:#FF6869;
+
+}
+
+.bgGreen{
+    background-color:#86CE84;
+
+}
+
+
+
