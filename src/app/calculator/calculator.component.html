@@ -12,37 +12,37 @@
         </div>
 
         <div class="card-body d-flex flex-row displayTop text-right text-white mb-3">
-        0
+        {{numbDisplay}}
         </div>
 
         <div class="mb-2 rounded w-100 d-flex flex-row justify-content-center">
-            <button type="button" class="btn btn-secondary buttonDisplay bgBlue m-1">AC</button>
+            <button type="button" (click)="clearDisplay()" class="btn btn-secondary buttonDisplay bgBlue m-1">AC</button>
             <button type="button" class="btn btn-secondary buttonDisplay bgBlue m-1 ml-3">+/-</button>
-            <button type="button" class="btn btn-secondary buttonDisplay bgBlue m-1 ml-3">%</button>
-            <button type="button" class="btn btn-secondary bgRed buttonDisplay m-1 ml-3">÷</button>
+            <button type="button" (click)="operation('%')" class="btn btn-secondary buttonDisplay bgBlue m-1 ml-3">%</button>
+            <button type="button" (click)="operation('/')" class="btn btn-secondary bgRed buttonDisplay m-1 ml-3">÷</button>
         </div>
         <div class="mb-2 rounded w-100 d-flex flex-row justify-content-center">
-            <button type="button" class="btn btn-secondary buttonDisplay bgBlueDark m-1">7</button>
-            <button type="button" class="btn btn-secondary buttonDisplay bgBlueDark m-1 ml-3">8</button>
-            <button type="button" class="btn btn-secondary buttonDisplay bgBlueDark m-1 ml-3">9</button>
-            <button type="button" class="btn btn-secondary bgRed buttonDisplay m-1 ml-3">x</button>
+            <button type="button" (click)="clickButtonNumb(7)" class="btn btn-secondary buttonDisplay bgBlueDark m-1">7</button>
+            <button type="button" (click)="clickButtonNumb(8)" class="btn btn-secondary buttonDisplay bgBlueDark m-1 ml-3">8</button>
+            <button type="button" (click)="clickButtonNumb(9)" class="btn btn-secondary buttonDisplay bgBlueDark m-1 ml-3">9</button>
+            <button type="button" (click)="operation('x')" class="btn btn-secondary bgRed buttonDisplay m-1 ml-3">x</button>
         </div>
         <div class="mb-2 rounded w-100 d-flex flex-row justify-content-center">
-            <button type="button" class="btn btn-secondary buttonDisplay bgBlueDark m-1">4</button>
-            <button type="button" class="btn btn-secondary buttonDisplay bgBlueDark m-1 ml-3">5</button>
-            <button type="button" class="btn btn-secondary buttonDisplay bgBlueDark m-1 ml-3">6</button>
-            <button type="button" class="btn btn-secondary bgRed buttonDisplay m-1 ml-3">-</button>
+            <button type="button" (click)="clickButtonNumb(4)" class="btn btn-secondary buttonDisplay bgBlueDark m-1">4</button>
+            <button type="button" (click)="clickButtonNumb(5)" class="btn btn-secondary buttonDisplay bgBlueDark m-1 ml-3">5</button>
+            <button type="button" (click)="clickButtonNumb(6)" class="btn btn-secondary buttonDisplay bgBlueDark m-1 ml-3">6</button>
+            <button type="button" (click)="operation('-')" class="btn btn-secondary bgRed buttonDisplay m-1 ml-3">-</button>
         </div>
         <div class="mb-2 rounded w-100 d-flex flex-row justify-content-center">
-            <button type="button" class="btn btn-secondary buttonDisplay bgBlueDark m-1">1</button>
-            <button type="button" class="btn btn-secondary buttonDisplay bgBlueDark m-1 ml-3">2</button>
-            <button type="button" class="btn btn-secondary buttonDisplay bgBlueDark m-1 ml-3">3</button>
-            <button type="button" class="btn btn-secondary bgRed buttonDisplay m-1 ml-3">+</button>
+            <button type="button" (click)="clickButtonNumb(1)" class="btn btn-secondary buttonDisplay bgBlueDark m-1">1</button>
+            <button type="button" (click)="clickButtonNumb(2)" class="btn btn-secondary buttonDisplay bgBlueDark m-1 ml-3">2</button>
+            <button type="button" (click)="clickButtonNumb(3)" class="btn btn-secondary buttonDisplay bgBlueDark m-1 ml-3">3</button>
+            <button type="button" (click)="operation('+')" class="btn btn-secondary bgRed buttonDisplay m-1 ml-3">+</button>
         </div>
         <div class="mb-3 rounded w-100 d-flex flex-row justify-content-center">
-            <button type="button" class="btn btn-secondary buttonDisplay buttonZero bgBlueDark m-1">0</button>
+            <button type="button" (click)="clickButtonNumb('0')" class="btn btn-secondary buttonDisplay buttonZero bgBlueDark m-1">0</button>
             <button type="button" class="btn btn-secondary buttonDisplay bgBlueDark m-1 ml-3">,</button>
-            <button type="button" class="btn btn-secondary bgGreen buttonDisplay m-1 ml-3">=</button>
+            <button type="button" (click)="equal()" class="btn btn-secondary bgGreen buttonDisplay m-1 ml-3">=</button>
         </div>
 
         <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
