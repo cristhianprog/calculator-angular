@@ -16,7 +16,7 @@
            
             <div *ngIf="showHist">
                 <div class="mb-4 numbersHistoric" *ngFor="let hist of arrayHistoric">
-                    {{hist.firstNumb}} {{hist.operation}} {{hist.secondNumb}} = {{hist.result}}
+                    {{hist.data[0].primeiro_num}} {{hist.data[0].operador}} {{hist.data[0].segundo_num}} = {{hist.data[0].resultado}}
                 </div> 
             </div>
             

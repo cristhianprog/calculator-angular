@@ -1,5 +1,8 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+
 import {MatSnackBar} from '@angular/material/snack-bar';
+
+import { OperacaoService } from '../shared/operacao.service';
 
 
 @Component({
@@ -15,7 +18,9 @@ export class CalculatorComponent implements OnInit {
   public dataOperator: String;
   public arrayHistoric: any = [];
 
-  constructor(private _snackBar: MatSnackBar) { }
+  constructor(private _snackBar: MatSnackBar, 
+              private service: OperacaoService,
+              ) { }
 
   durationInSeconds = 5;
 
@@ -30,10 +35,16 @@ export class CalculatorComponent implements OnInit {
   }
 
   historicShow(): void {
+    this.service.getBd().subscribe(resp =>{
+      console.log('resp', resp)
+      this.arrayHistoric = resp;
+    });
+
+
     this.showHist = !this.showHist;
   }
 
-  calcBackEnd(firstNumb, secNumb, operator){
+  calculate(firstNumb, secNumb, operator){
     let first = firstNumb.replace(",", ".");
     let second = secNumb.replace(",", ".");
     first = parseFloat(first);
@@ -63,8 +74,6 @@ export class CalculatorComponent implements OnInit {
        
     }
 
-    console.log("result - ", result)
-
     if(!Number.isInteger(result)){
       let arrayNum;
       let numb;
@@ -72,29 +81,27 @@ export class CalculatorComponent implements OnInit {
       let clearZero;
 
       let decimalResult = result.toFixed(2); //fixa apenas duas casas depois da virgula
-      console.log("resulteeee - ", decimalResult)
       
       arrayNum = decimalResult.split('.'); //separa numero e decimal
       numb = arrayNum[0];
       decimal = parseInt(arrayNum[1]);
 
-
       clearZero = numb + ',' + decimal; //limpa os zeros depois da vírgula
-      console.log("resultaaaa - ", clearZero)
+
       result = clearZero;
     }
    
     result = result.toString();
 
-    this.arrayHistoric.push(
-      {
-        firstNumb: first,
-        secondNumb:second,
-        operation: operator,
-        result: result
-      }
-    );
-    console.log('array = ', this.arrayHistoric);
+    let sendOperation = [{
+      'primeiro_num': first, 
+      'operador': operator, 
+      'segundo_num': second, 
+      'resultado': result
+    }];
+
+    this.service.saveBd(sendOperation);
+    
     this.numbDisplay =  result//trocar quando for no back-end
 
   }
@@ -120,7 +127,6 @@ export class CalculatorComponent implements OnInit {
     this.dataOperator = operator;
     this.dataDisplay = this.numbDisplay;
     this.numbDisplay = operator;
-    //this.numbDisplay = "0";
     
   }
 
@@ -131,9 +137,7 @@ export class CalculatorComponent implements OnInit {
 
   equal() {
     if(this.dataDisplay != ""){
-      console.log('1111 - ', this.dataDisplay)
-      console.log('1111 - ', this.dataOperator)
-      console.log('1111 - ', this.numbDisplay)
+
       if(this.numbDisplay == "÷" || this.numbDisplay == "+" || this.numbDisplay == "-" || this.numbDisplay == "x") {
         return this.openSnackBar('Esolha outro valor!');
 
@@ -141,7 +145,7 @@ export class CalculatorComponent implements OnInit {
         return  this.openSnackBar('Esolha uma operação!');
       }
      
-      this.calcBackEnd(this.dataDisplay, this.numbDisplay, this.dataOperator);
+      this.calculate(this.dataDisplay, this.numbDisplay, this.dataOperator);
       this.dataOperator = "";
     }
 
@@ -149,7 +153,6 @@ export class CalculatorComponent implements OnInit {
 
   comma(): void {
     if(this.numbDisplay.indexOf(',',0) < 0){
-      console.log('textp --- ' , this.numbDisplay.indexOf(',',0))
       this.numbDisplay += "," 
     }
     
