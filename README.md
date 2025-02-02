@@ -13,10 +13,6 @@ Foram ultilizados esses frameworks para manipular a criaçao do layout e cores d
 - <b>RxJx</b> v6.6.0:<br>
 Foi usado para compor, manipular e combinar fluxos de dados assíncronos, de maneira declarativa e funcional.<br>
 
-## Dependences
-"bootstrap": "^4.5.0",<br>
-"firebase": "^8.2.4",
-
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
