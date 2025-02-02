@@ -20,7 +20,9 @@ export class CalculatorComponent implements OnInit {
 
   constructor(private _snackBar: MatSnackBar, 
               private service: OperacaoService,
-              ) { }
+              ) { 
+               
+              }
 
   durationInSeconds = 5;
 
@@ -36,12 +38,15 @@ export class CalculatorComponent implements OnInit {
 
   historicShow(): void {
     this.service.getBd().subscribe(resp =>{
-      console.log('resp', resp)
       this.arrayHistoric = resp;
     });
 
-
     this.showHist = !this.showHist;
+  }
+
+  cleanHistoric(): void {
+    this.service.clearBd();
+    this.showHist = false;
   }
 
   calculate(firstNumb, secNumb, operator){

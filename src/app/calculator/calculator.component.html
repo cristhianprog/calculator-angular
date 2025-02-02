@@ -4,10 +4,14 @@
     <div class="base-calc rounded">
         <div class="mb-4 mt-3">
             <div class="d-flex flex-row  justify-content-between align-self-center m-2">
-                <label class="align-self-center text-white font-weight-bold">Calculadora</label>
-                <button type="button" class="btn btn-primary bgBlue border-0" (click)="historicShow()">
-                    Histórico
+                <label class="align-self-center text-white font-weight-bold">Calculator</label>
+                <button *ngIf="showHist && arrayHistoric.length > 0" type="button" class="btn btn-primary bgRed border-0" (click)="cleanHistoric()">
+                    Clean Historic
                 </button>
+                <button type="button" class="btn btn-primary bgBlue border-0" (click)="historicShow()">
+                    Historic
+                </button>
+
             </div>
         </div>
        

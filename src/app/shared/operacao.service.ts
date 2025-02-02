@@ -9,12 +9,27 @@ export class OperacaoService {
 
   constructor(private db: AngularFireDatabase) { }
 
-  saveBd(operacao){
-    this.db.list('operacao').push(operacao);
+  saveBd(operation) {
+    this.db.list('operacao').push(operation)
+      .then(() => {
+        console.log('Operations saved!');
+      })
+      .catch((error) => {
+        console.error('Error to save:', error);
+      });
+  }
+
+  clearBd() {
+    this.db.list('operacao').remove()
+      .then(() => {
+        console.log('Operations list cleaned!');
+      })
+      .catch((error) => {
+        console.error('Error to cleaned:', error);
+      });
   }
 
   getBd() {
-
     return this.db.list('operacao')
       .snapshotChanges()
       .pipe(
