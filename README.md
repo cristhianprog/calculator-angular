@@ -4,13 +4,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Project created to be added to the portfolio with the aim of demonstrating the Angular skills below:
 
-- <b>Firebase</b>: <br>
+- <b>Firebase</b>: v8.2.4<br>
 Foi ultilizado o Firebase para manter os dados do historico de calculas realizados e fazer o CRUD.<br>
 
-- <b>Bootstrap</b>:<br>
+- <b>Bootstrap</b> v4.5.0 :<br>
 Foram ultilizados esses frameworks para manipular a criaçao do layout e cores do projeto.<br>
 
-- <b>RxJx</b>:<br>
+- <b>RxJx</b> v6.6.0:<br>
 Foi usado para compor, manipular e combinar fluxos de dados assíncronos, de maneira declarativa e funcional.<br>
 
 ## Dependences
