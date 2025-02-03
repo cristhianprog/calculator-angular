@@ -22,6 +22,10 @@ Node.js (v16 recommended)<br>
 Angular CLI (v11 or higher)<br>
 Firebase account to configure the operation history storage<br>
 
+## Installation
+<h3>1. Clone the repository<h3><br>
+`git clone https://github.com/your-username/calculadora-angular.git`<br>
+
 ## Running locally
 
 (version NodeJs recommended > v16)<br><br>
