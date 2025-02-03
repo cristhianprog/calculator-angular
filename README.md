@@ -14,14 +14,12 @@ Foram ultilizados esses frameworks para manipular a criaçao do layout e cores d
 Foi usado para compor, manipular e combinar fluxos de dados assíncronos, de maneira declarativa e funcional.<br>
 
 ## Running locally
-(version NodeJs recommended > v16)<br>
-Download de project through `git clone repository-path` or .zip
-Run `npm install`
 
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+(version NodeJs recommended > v16)<br><br>
+Download de project through `git clone repository-path` or .zip<br>
+Run `npm install` to install dependences.<br>
+Run `npm start` or `ng serve`.<br>
+Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Build
 
