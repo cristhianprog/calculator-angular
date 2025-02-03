@@ -9,14 +9,11 @@ This is a calculator project developed in [Angular CLI](https://github.com/angul
 <b>Limpar Histórico:</b> Limpeza do histórico de operações com um clique.<br>
 <b>Design Responsivo:</b> A aplicação é responsiva, utilizando o Bootstrap e Material Design para uma interface agradável.<br>
 
-- <b>Firebase</b>: v8.2.4<br>
-Foi ultilizado o Firebase para manter os dados do historico de calculas realizados e fazer o CRUD.<br>
-
-- <b>Bootstrap</b> v4.5.0 :<br>
-Foram ultilizados esses frameworks para manipular a criaçao do layout e cores do projeto.<br>
-
-- <b>RxJx</b> v6.6.0:<br>
-Foi usado para compor, manipular e combinar fluxos de dados assíncronos, de maneira declarativa e funcional.<br>
+## Tecnologias Utilizadas
+<b>Angular 11</b> Framework para construção da aplicação. <br>
+<b>Bootstrap:</b> Framework CSS para tornar a interface responsiva e moderna.<br>
+<b>Angular Material:</b> Componentes de interface ricos e responsivos para melhorar a usabilidade.<br>
+<b>Firebase:</b> Plataforma de Backend-as-a-Service para armazenar o histórico de operações em tempo real.<br>
 
 ## Running locally
 
