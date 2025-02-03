@@ -1,4 +1,6 @@
 # Calculator
+![Angular Build](https://github.com/cristhianprog/calculator-angular/actions/workflows/angular.yml/badge.svg?branch=main)
+
 This is a calculator project developed in [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5 with Bootstrap and Material Design. The application allows you to perform basic mathematical operations (addition, subtraction, multiplication, division), calculate percentages and even keeps a history of the last operations performed, storing the data in Firebase.
 
 ### Features<br>
