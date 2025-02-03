@@ -16,11 +16,11 @@ This is a calculator project developed in [Angular CLI](https://github.com/angul
 <b>Firebase:</b> Backend-as-a-Service platform for storing the operation history in real-time.<br>
 
 ## Prerequisites
-Before running the project locally, you need to have the following installed:
+Before running the project locally, you need to have the following installed:<br>
 
-Node.js (v16 recommended)
-Angular CLI (v11 or higher)
-Firebase account to configure the operation history storage
+Node.js (v16 recommended)<br>
+Angular CLI (v11 or higher)<br>
+Firebase account to configure the operation history storage<br>
 
 ## Running locally
 
