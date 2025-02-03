@@ -3,11 +3,11 @@
 This is a calculator project developed in [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5 with Bootstrap and Material Design. The application allows you to perform basic mathematical operations (addition, subtraction, multiplication, division), calculate percentages and even keeps a history of the last operations performed, storing the data in Firebase.
 
 <h3>Funcionalidades</h3>
-<b>Operações Básicas:</b> Soma, Subtração, Multiplicação e Divisão.
-<b>Porcentagem:</b> Cálculos de porcentagem.
-<b>Histórico de Operações:</b> Armazenamento das últimas operações realizadas com a possibilidade de visualizá-las.
-<b>Limpar Histórico:</b> Limpeza do histórico de operações com um clique.
-<b>Design Responsivo:</b> A aplicação é responsiva, utilizando o Bootstrap e Material Design para uma interface agradável.
+<b>Operações Básicas:</b> Soma, Subtração, Multiplicação e Divisão.<br>
+<b>Porcentagem:</b> Cálculos de porcentagem.<br>
+<b>Histórico de Operações:</b> Armazenamento das últimas operações realizadas com a possibilidade de visualizá-las.<br>
+<b>Limpar Histórico:</b> Limpeza do histórico de operações com um clique.<br>
+<b>Design Responsivo:</b> A aplicação é responsiva, utilizando o Bootstrap e Material Design para uma interface agradável.<br>
 
 - <b>Firebase</b>: v8.2.4<br>
 Foi ultilizado o Firebase para manter os dados do historico de calculas realizados e fazer o CRUD.<br>
